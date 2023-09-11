@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            *{
+                box-sizing:border-box;
+                margin:0;
+            }
+            
+            #nav{
+                float:left;
+                width:30%;
+                height:100%;
+                background-color: rgba(175, 173, 173, 0.651);
+                position:fixed;
+                color:white;
+                
+            }
+            #sadrzaj{
+                width:70%;
+                height:100%;
+                margin-left:32%;
+
+            }
+            #dugme{
+                display:none;
+            }
+            #stavkeMenija a{
+                color:white;
+                display:block;
+                text-decoration:none;
+                padding:5px;
+                font-size:larger;
+                margin-left:10px;
+            }
+            #dugmeDiv{
+                margin-top:10px;
+                margin-left:10px;
+            }
+            @media only screen and (max-width:600px){
+                #nav{
+                float:none;
+                width:100%;
+                height:auto;
+                position:static;
+                margin-top:0;
+                text-align:center;
+                }
+                #dugmeDiv{
+                margin:0;
+                cursor: pointer;
+            }
+            #dugme{
+                display:inline;
+                
+            }
+            #stavkeMenija{
+                transition:3s;
+                overflow:hidden;
+            }
+            #stavkeMenija a{
+                border-bottom:1px solid white;
+                margin-left:0;
+                
+            }
+            #sadrzaj{
+                width:100%;
+                margin-left:0;
+
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="kontejner">
+        <div id="nav">
+            <div id="dugmeDiv" onclick="show()">
+              <div id="dugme">☰</div> Naziv firme
+            </div>
+            <div id="stavkeMenija">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+              <a href="#">Link 4</a>
+            </div>
+          </div>
+          <div id="sadrzaj">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+              of Lorem Ipsum.</p>
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+              of Lorem Ipsum.</p>
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+              of Lorem Ipsum.</p>
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+              of Lorem Ipsum.</p>
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+              of Lorem Ipsum.</p>
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+              of Lorem Ipsum.</p>
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+              of Lorem Ipsum.</p>
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+              of Lorem Ipsum.</p>
+        
+          </div>
+        </div>
+    </body>
+    <script>
+        var a =document.getElementById("stavkeMenija");
+        var otvoren=true;
+        function show(){
+            if(otvoren){
+                a.style.height=0;
+                otvoren=false;
+            }
+            else{
+                a.style.height=a.scrollHeight + "px";
+                otvoren=true;
+            }
+        }
+    </script>
+</html>
